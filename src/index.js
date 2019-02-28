@@ -3,4 +3,6 @@ import pokemans from '../data/pokedex.js';
 import loadPaging from './paging-component.js';
 
 loadCards(pokemans);
-loadPaging(pokemans.length);
+loadPaging(pokemans.length, pagingOptions => {
+    console.log(pagingOptions);
+});

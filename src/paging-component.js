@@ -6,7 +6,7 @@ const nextButton = document.getElementById('next-button');
 const PER_PAGE = 30;
 
 
-export default function loadPaging(totalPokemans) {
+export default function loadPaging(totalPokemans, callback) {
     const totalPageCount = Math.ceil(totalPokemans / PER_PAGE);
     totalPages.textContent = totalPageCount;
     
@@ -25,12 +25,13 @@ export default function loadPaging(totalPokemans) {
 
     function updatePaging() {
         currentPage.textContent = currentPageNumber;
+        nextButton.disabled = currentPageNumber === totalPageCount;
+        previousButton.disabled = currentPageNumber === 1;
+        
         const pagingOptions = {
             page: currentPageNumber,
             perPage: PER_PAGE
         };
-        console.log(pagingOptions);
-        nextButton.disabled = currentPageNumber === totalPageCount;
-        previousButton.disabled = currentPageNumber === 1;
+        callback(pagingOptions);
     }
 } 
