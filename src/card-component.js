@@ -1,6 +1,6 @@
 export function createCard(pokemon) {
     const html = /*html*/ `
-        <li>
+        <li class="${pokemon.type_1}">
             <h2>${pokemon.pokemon}</h2>
             <img src="${pokemon.url_image}">
             <p>

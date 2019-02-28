@@ -38,7 +38,7 @@ test('Make card template', assert => {
         'pokedex': 'http://www.pokemon.com/us/pokedex/bulbasaur'
     };
     const expected = /*html*/ `
-        <li>
+        <li class="grass">
             <h2>bulbasaur</h2>
             <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
             <p>
