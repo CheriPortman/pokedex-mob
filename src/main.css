@@ -1,17 +1,24 @@
 body {
     background-color: blanchedalmond;
 }
-
+ul {
+    display: flex;
+    flex-flow: row wrap;
+}
 li {
-    width: 150px;
-    display: inline-block;
+    width: 100px;
+    display: inline-flex;
     border: 1px solid purple;
-    margin: 10px;
+    margin: 5px;
     text-align: center;
+    height: 150px;
+    flex-flow: column wrap;
+    justify-content: space-between;
 }
 
 h2 {
     font-size: 1em;
+    margin: 0;
 }
 
 img {
@@ -19,6 +26,6 @@ img {
 }
 
 p {
-    font-size: .8em;
+    font-size: .6em;
     margin: 0;
 }

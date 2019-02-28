@@ -15,3 +15,11 @@ export function createCard(pokemon) {
     const dom = template.content;
     return dom;
 }
+
+const pokelist = document.getElementById('pokelist');
+export default function loadCards(pokemans) {
+    pokemans.forEach(pokemon => {
+        const dom = createCard(pokemon);
+        pokelist.appendChild(dom);
+    });
+}
