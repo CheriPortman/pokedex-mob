@@ -29,7 +29,7 @@ export default function loadPaging(totalPokemans, callback) {
         previousButton.disabled = currentPageNumber === 1;
         
         const pagingOptions = {
-            page: currentPageNumber,
+            currentPage: currentPageNumber,
             perPage: PER_PAGE
         };
         callback(pagingOptions);
