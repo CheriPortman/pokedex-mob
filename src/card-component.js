@@ -18,8 +18,16 @@ export function createCard(pokemon) {
 
 const pokelist = document.getElementById('pokelist');
 export default function loadCards(pokemans) {
+    clearPokelist();
+
     pokemans.forEach(pokemon => {
         const dom = createCard(pokemon);
         pokelist.appendChild(dom);
     });
+}
+
+function clearPokelist() {
+    while(pokelist.children.length > 0) {
+        pokelist.lastElementChild.remove();
+    }
 }

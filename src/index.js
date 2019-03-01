@@ -1,8 +1,9 @@
 import loadCards from './card-component.js';
 import pokemans from '../data/pokedex.js';
 import loadPaging from './paging-component.js';
+import pageArray from './page-array.js';
 
-loadCards(pokemans);
 loadPaging(pokemans.length, pagingOptions => {
-    console.log(pagingOptions);
+    const pagedPokemans = pageArray(pokemans, pagingOptions);
+    loadCards(pagedPokemans);
 });
