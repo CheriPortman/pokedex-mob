@@ -17,12 +17,13 @@ ul {
     display: flex;
     flex-flow: row wrap;
     padding: 0;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 li {
     width: 110px;
     display: inline-flex;
     border: 1px solid black;
+    border-radius: 3px;
     margin: 5px;
     text-align: center;
     height: 160px;
