@@ -4,6 +4,11 @@ body {
     font-family: Arial;
     text-transform: capitalize;
 }
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 p {
     display: flex;
     justify-content: space-around;
@@ -11,14 +16,16 @@ p {
 ul {
     display: flex;
     flex-flow: row wrap;
+    padding: 0;
+    justify-content: center;
 }
 li {
-    width: 100px;
+    width: 110px;
     display: inline-flex;
-    border: 1px solid purple;
+    border: 1px solid black;
     margin: 5px;
     text-align: center;
-    height: 150px;
+    height: 160px;
     flex-flow: column wrap;
     justify-content: space-between;
 }
